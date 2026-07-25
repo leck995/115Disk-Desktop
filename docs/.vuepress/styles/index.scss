@@ -3,17 +3,23 @@
   font-weight: 600;
 }
 
-/* 首页：功能介绍上方截图，一行两列 */
+/* 首页：功能介绍上方截图，一行两列、等宽等高、居中放大 */
 .home-screenshots {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 1rem;
-  align-items: start;
-  margin: 0.5rem 0 1.75rem;
-  max-width: 52rem;
+  gap: 1.25rem;
+  align-items: stretch;
+  justify-content: center;
+  box-sizing: border-box;
+  width: min(100%, 64rem);
+  margin: 0.75rem auto 2rem;
+  padding: 0 0.5rem;
 }
 
 .home-screenshots__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   margin: 0;
   min-width: 0;
 }
@@ -21,31 +27,36 @@
 .home-screenshots__item img {
   display: block;
   width: 100%;
-  max-width: 100%;
-  height: auto;
-  max-height: 260px;
+  height: 320px;
   object-fit: cover;
   object-position: top center;
-  border-radius: 10px;
+  border-radius: 12px;
   border: 1px solid var(--c-border, #e2e2e3);
-  box-shadow: 0 8px 24px rgb(0 0 0 / 8%);
+  box-shadow: 0 10px 28px rgb(0 0 0 / 10%);
   background: var(--c-bg, #fff);
 }
 
 .home-screenshots__item figcaption {
-  margin-top: 0.45rem;
+  margin-top: 0.55rem;
   color: var(--c-text-mute, #6b6b6b);
-  font-size: 0.85rem;
+  font-size: 0.9rem;
   text-align: center;
+}
+
+@media (max-width: 959px) {
+  .home-screenshots__item img {
+    height: 260px;
+  }
 }
 
 @media (max-width: 719px) {
   .home-screenshots {
     grid-template-columns: 1fr;
+    width: min(100%, 36rem);
   }
 
   .home-screenshots__item img {
-    max-height: 220px;
+    height: 240px;
   }
 }
 
