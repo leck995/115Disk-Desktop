@@ -3,6 +3,58 @@
   font-weight: 600;
 }
 
+/* 首页：功能介绍上方截图，一行两列 */
+.home-screenshots {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  align-items: start;
+  margin: 0.5rem 0 1.75rem;
+  max-width: 52rem;
+}
+
+.home-screenshots__item {
+  margin: 0;
+  min-width: 0;
+}
+
+.home-screenshots__item img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  max-height: 260px;
+  object-fit: cover;
+  object-position: top center;
+  border-radius: 10px;
+  border: 1px solid var(--c-border, #e2e2e3);
+  box-shadow: 0 8px 24px rgb(0 0 0 / 8%);
+  background: var(--c-bg, #fff);
+}
+
+.home-screenshots__item figcaption {
+  margin-top: 0.45rem;
+  color: var(--c-text-mute, #6b6b6b);
+  font-size: 0.85rem;
+  text-align: center;
+}
+
+@media (max-width: 719px) {
+  .home-screenshots {
+    grid-template-columns: 1fr;
+  }
+
+  .home-screenshots__item img {
+    max-height: 220px;
+  }
+}
+
+/* 首页 hero 图标尺寸（新 icon 为 512 方图） */
+.vp-hero-image {
+  max-width: 140px;
+  max-height: 140px;
+}
+
 /* 右侧：本页目录（宽屏显示） */
 .page-toc {
   display: none;

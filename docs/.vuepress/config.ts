@@ -6,7 +6,7 @@ export default defineUserConfig({
   lang: 'zh-CN',
   title: '115Disk',
   description: '基于 Tauri 2 + React + TypeScript 的 115 网盘桌面客户端',
-  head: [['link', { rel: 'icon', href: '/logo.png' }]],
+  head: [['link', { rel: 'icon', href: '/icon.png' }]],
 
   bundler: viteBundler(),
 

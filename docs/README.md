@@ -31,6 +31,17 @@ features:
 footer: false
 ---
 
+<div class="home-screenshots">
+  <figure class="home-screenshots__item">
+    <img src="/screenshots/home.png" alt="首页" width="880" height="490" />
+    <figcaption>首页</figcaption>
+  </figure>
+  <figure class="home-screenshots__item">
+    <img src="/screenshots/media-library.png" alt="媒体库" width="810" height="485" />
+    <figcaption>媒体库</figcaption>
+  </figure>
+</div>
+
 ## 功能介绍
 
 **115Disk** 是一款面向 115 网盘的桌面客户端，改善网页版的糟糕体验，提供完善的网盘管理功能，更提供强大媒体库功能，你可以直接在程序中对网盘视频进行管理，封面，元数据，一切都有。
