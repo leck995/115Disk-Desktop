@@ -1,0 +1,78 @@
+/* 左侧：仅文档列表（sidebarDepth: 0），不再嵌套正文标题 */
+.vp-sidebar .vp-sidebar-item.level-1 {
+  font-weight: 600;
+}
+
+/* 右侧：本页目录（宽屏显示） */
+.page-toc {
+  display: none;
+}
+
+@media (min-width: 1440px) {
+  .page-toc {
+    position: fixed;
+    top: calc(var(--navbar-height) + 1.5rem);
+    /* 侧栏 + 正文最大宽度后的右侧空隙 */
+    left: calc(var(--sidebar-width) + var(--content-width) + 3.25rem);
+    z-index: 5;
+
+    display: block;
+
+    width: 13.5rem;
+    max-width: calc(100vw - var(--sidebar-width) - var(--content-width) - 4rem);
+    max-height: calc(100vh - var(--navbar-height) - 3rem);
+    overflow: auto;
+
+    padding: 0.15rem 0.5rem 0.25rem 0.85rem;
+    border-inline-start: 1px solid var(--c-border, #e2e2e3);
+
+    font-size: 0.84rem;
+    line-height: 1.5;
+  }
+
+  .page-toc__title {
+    margin-bottom: 0.55rem;
+    color: var(--c-text-mute, #6b6b6b);
+    font-weight: 600;
+    font-size: 0.76rem;
+    letter-spacing: 0.04em;
+  }
+
+  .page-toc__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .page-toc__item {
+    margin: 0.18rem 0;
+  }
+
+  .page-toc__item.level-3 {
+    padding-inline-start: 0.7rem;
+  }
+
+  .page-toc__link {
+    display: block;
+    color: var(--c-text-subtle, #646464);
+    text-decoration: none;
+    transition: color 0.15s ease;
+  }
+
+  .page-toc__link:hover {
+    color: var(--c-text, #213547);
+  }
+
+  .page-toc__item.active > .page-toc__link {
+    color: var(--c-brand, var(--c-accent, #3eaf7c));
+    font-weight: 600;
+  }
+}
+
+/* 超宽屏：目录贴右侧，避免 left 计算超出视口时被裁切 */
+@media (min-width: 1680px) {
+  .page-toc {
+    left: auto;
+    right: 1.75rem;
+  }
+}
