@@ -44,7 +44,7 @@ export default defineUserConfig({
           ],
         },
         {
-          text: '媒体库',
+          text: '媒体库（重点）',
           children: [
             { text: '媒体库', link: '/guide/media-library' },
             { text: '媒体库 · 刮削', link: '/guide/media-scrape' },
